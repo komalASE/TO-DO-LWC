@@ -1,0 +1,31 @@
+<template>
+  <lightning-button icon-name="utility:task" label="To-Do List" onclick={handleClick}></lightning-button>
+  <div if:true={showToDo}>
+    <lightning-card>
+      <h1>Today's Task</h1>
+      <div class="slds-grid slds-grid_vertical-align-center">
+        <div class="slds-col input-text">
+          <lightning-input class="input-field" type="text" data-index={index} value={task} onchange={handleChange}></lightning-input>
+        </div>
+        <div class="slds-col plus-icon">
+          <lightning-button class="add-icon" icon-name="utility:add" label="New Task" onclick={handleAdd}></lightning-button>
+        </div>
+      </div>
+      <ul>
+        <template for:each={tasksToDo} for:item="task" for:index="index">
+          <li key={task}>
+            <div class="slds-grid slds-grid_vertical-align-center">
+              <lightning-input class="task-saved-input" style="border:none" value={task} data-id={index} onchange={handleEdit} onblur={handleBlurField} disabled="true"></lightning-input>
+              <div class="slds-col slds-size_1-of-4">
+                <lightning-button class="delete-icon" icon-name="utility:close" data-index={index} onclick={handleDelete}></lightning-button>
+              </div>
+              <div>
+              <lightning-button class="edit-icon" icon-name="utility:edit" data-index={index} onclick={handleInputFocus}></lightning-button>
+            </div>
+            </div>
+          </li>
+        </template>
+      </ul> 
+    </lightning-card>
+  </div>
+</template>

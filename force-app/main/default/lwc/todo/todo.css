@@ -1,0 +1,43 @@
+h1{
+    font-weight: 900;
+  text-decoration: underline;  
+  text-align: center;  
+}
+
+.input-field {
+  width: calc(100% - 40px);  
+  margin-left: 23px;  
+}
+
+li {
+  margin: 10px;  
+  border-radius: 5px;  
+  background-color: #f3f3f3;  
+  display: flex;  
+  align-items: center;  
+}
+
+.slds-col.input-text{
+  margin-bottom: 17px;
+  margin-left: 14px;    
+} 
+
+.slds-form-element__control.slds-grow{
+  margin-bottom: 18px;  
+}
+
+.slds-grid.slds-grid_vertical-align-center{
+  margin: auto; 
+}
+
+.task-saved-input{
+  margin-bottom: 19px;  
+}
+  
+.delete-icon {
+  margin-left: 10px;
+}
+  
+.delete-icon:hover {
+  background-color: #d8d8d8;
+}
